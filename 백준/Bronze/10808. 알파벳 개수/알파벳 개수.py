@@ -1,9 +1,6 @@
 import sys
 s=sys.stdin.readline().rstrip()
-dict={}
-alp='abcdefghijklmnopqrstuvwxyz'
-for i in alp:
-    dict[i]=0
+alp=[0]*26
 for i in s:
-    dict[i]+=1
-print(' '.join(map(str,dict.values())))
+    alp[ord(i)-97]+=1
+print(*alp)
